@@ -1,0 +1,16 @@
+{
+    "name": "nird/village-resistant",
+    "description": "API Backend pour le Village Numérique Résistant - Démarche NIRD",
+    "type": "project",
+    "require": {
+        "php": ">=8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "start": "php -S 0.0.0.0:8000 -t public"
+    }
+}

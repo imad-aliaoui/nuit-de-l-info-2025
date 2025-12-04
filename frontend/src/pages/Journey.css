@@ -1,0 +1,270 @@
+.journey-page {
+  min-height: 100vh;
+}
+
+.journey-hero {
+  background: var(--gradient-hero);
+  color: var(--white);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.journey-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.journey-hero p {
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.journey-content {
+  background: var(--light-bg);
+}
+
+.progress-section {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  box-shadow: var(--shadow-sm);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.progress-header h3 {
+  color: var(--primary-blue);
+  font-size: 1.2rem;
+}
+
+.progress-text {
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+.progress-bar {
+  height: 20px;
+  background: var(--light-bg);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-green) 0%, #8bc34a 100%);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.victory-badge {
+  margin-top: 20px;
+  padding: 15px 25px;
+  background: linear-gradient(135deg, #ffd700 0%, #ffb300 100%);
+  color: #5d4e00;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+.journey-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-step {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.step-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  flex-shrink: 0;
+}
+
+.connector-line {
+  width: 4px;
+  flex: 1;
+  background: #ddd;
+  margin-bottom: 10px;
+}
+
+.timeline-step:first-child .connector-line {
+  visibility: hidden;
+}
+
+.step-dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 4px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #888;
+  transition: var(--transition);
+}
+
+.timeline-step.active .step-dot {
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+  transform: scale(1.1);
+}
+
+.timeline-step.completed .step-dot {
+  background: var(--primary-green);
+  border-color: var(--primary-green);
+  color: var(--white);
+}
+
+.timeline-step.completed .connector-line {
+  background: var(--primary-green);
+}
+
+.step-card {
+  flex: 1;
+  background: var(--white);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.timeline-step.active .step-card {
+  border-color: var(--primary-green);
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-step.completed .step-card {
+  opacity: 0.8;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.step-emoji {
+  font-size: 2.5rem;
+}
+
+.step-info h3 {
+  font-size: 1.3rem;
+  color: var(--primary-blue);
+  margin-bottom: 5px;
+}
+
+.step-difficulty {
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.difficulty-facile {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.difficulty-moyen {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.difficulty-avancé {
+  background: #fce4ec;
+  color: #c2185b;
+}
+
+.step-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.step-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-completed {
+  background: #e8f5e9;
+  color: var(--primary-green);
+  cursor: default;
+}
+
+.btn-completed:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.journey-cta {
+  text-align: center;
+  padding: 50px;
+  background: var(--white);
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.journey-cta h3 {
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+}
+
+.journey-cta p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .journey-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .timeline-step {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .step-connector {
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .connector-line {
+    height: 4px;
+    width: auto;
+    flex: 1;
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+  
+  .progress-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

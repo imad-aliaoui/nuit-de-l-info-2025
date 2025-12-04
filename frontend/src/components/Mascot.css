@@ -1,0 +1,84 @@
+.mascot-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  pointer-events: none;
+}
+
+.mascot-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mascot {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.mascot-character {
+  font-size: 4rem;
+  animation: bounce 1s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.mascot-bubble {
+  background: var(--white);
+  padding: 15px 20px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  max-width: 300px;
+  position: relative;
+  animation: fadeIn 0.5s ease;
+}
+
+.mascot-bubble p {
+  font-weight: 600;
+  color: var(--dark-text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.bubble-tail {
+  position: absolute;
+  left: -10px;
+  bottom: 20px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 15px solid var(--white);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(-5deg); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+.gaulois-mode .mascot-bubble {
+  background: #f5e6d3;
+  border: 3px solid #8b4513;
+}
+
+.gaulois-mode .bubble-tail {
+  border-right-color: #f5e6d3;
+}
+
+@media (max-width: 600px) {
+  .mascot-character {
+    font-size: 3rem;
+  }
+  
+  .mascot-bubble {
+    max-width: 200px;
+    padding: 12px 15px;
+  }
+  
+  .mascot-bubble p {
+    font-size: 0.85rem;
+  }
+}

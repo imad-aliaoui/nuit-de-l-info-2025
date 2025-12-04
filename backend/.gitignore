@@ -1,0 +1,18 @@
+# Dependencies
+/vendor/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Cache
+/var/cache/
+/var/log/
+
+# IDE
+.idea/
+.vscode/
+
+# Composer
+composer.lock
