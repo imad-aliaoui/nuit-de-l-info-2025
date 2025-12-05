@@ -214,6 +214,4 @@ Production sous licence libre - Projet réalisé pour la Nuit de l'Info 2025
 
 ---
 
-**Contact** : contact@evereast-solutions.com
-
 *Vive le libre, vive la résistance numérique ! 🏛️🐧*
